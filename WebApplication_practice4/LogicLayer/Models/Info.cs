@@ -1,8 +1,8 @@
 using System;
 
-namespace WebApplication_practice4
+namespace Git.Pracice_4.Logic.Models
 {
-    public class Student
+    public class Info
     {
         public String Name { get; set; }
     }
