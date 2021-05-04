@@ -8,19 +8,20 @@ namespace Git.Pracice_4.Logic.Models
     {
         public static List<Info> MapStudent(List<Database.Models.Info> groups)
         {
-            List<Info> mappedStudents = new List<Info>();
+            List<Info> mappedGroups = new List<Info>();
 
             foreach (Database.Models.Info group in groups)
             {
-                mappedStudents.Add(new Info()
+                mappedGroups.Add(new Info()
                 {
                     ID = group.ID,
-                    Name = group.Name
+                    Name = group.Name,
+                    AvailableSlots = group.AvailableSlots
                 });
                 
             }
 
-            return mappedStudents; 
+            return mappedGroups; 
         }
     }
 }

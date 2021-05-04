@@ -25,26 +25,29 @@ namespace Git.Pracice_4.Logic.Managers
             return DTOMappers.MapStudent(groups); 
         }
 
-        public Info CreateStudent(string groupName)
+        public Info CreateGroup(string groupID, string groupName, int groupSlots)
         {
             return new Info()
             {
-                Name = groupName
-            }; 
+                Name = groupName,
+                ID = groupID,
+                AvailableSlots = groupSlots
+
+            };
         }
 
-        public Info UpdateStudent(Info group)
+        public Info UpdateGroup(Info group)
         {
             group.Name = "updated";
             return group; 
         }
 
-        public Info DeleteStudent(Info group)
+        public Info DeleteGroup(Info group)
         {
             group.Name = "deleted";
             return group;
         }
 
-
+        
     }
 }
