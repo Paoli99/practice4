@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Git.Pracice_4.Database;
+﻿using Git.Pracice_4.Database;
 using Git.Pracice_4.Logic.Models;
+using System.Collections.Generic;
 
 
 namespace Git.Pracice_4.Logic.Managers
@@ -23,28 +21,28 @@ namespace Git.Pracice_4.Logic.Managers
 
             Console.Out.WriteLine($"We are connecting to.... {dbConnection}");*/
 
-            List<Database.Models.Info> students =  _dbContext.GetAll();
-            return DTOMappers.MapStudent(students); 
+            List<Database.Models.Info> groups =  _dbContext.GetAll();
+            return DTOMappers.MapStudent(groups); 
         }
 
-        public Info CreateStudent(string studentName)
+        public Info CreateStudent(string groupName)
         {
             return new Info()
             {
-                Name = studentName
+                Name = groupName
             }; 
         }
 
-        public Info UpdateStudent(Info student)
+        public Info UpdateStudent(Info group)
         {
-            student.Name = "updated";
-            return student; 
+            group.Name = "updated";
+            return group; 
         }
 
-        public Info DeleteStudent(Info student)
+        public Info DeleteStudent(Info group)
         {
-            student.Name = "deleted";
-            return student;
+            group.Name = "deleted";
+            return group;
         }
 
 

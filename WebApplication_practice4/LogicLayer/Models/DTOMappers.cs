@@ -6,16 +6,16 @@ namespace Git.Pracice_4.Logic.Models
 {
     public static class DTOMappers
     {
-        public static List<Info> MapStudent(List<Database.Models.Info> students)
+        public static List<Info> MapStudent(List<Database.Models.Info> groups)
         {
             List<Info> mappedStudents = new List<Info>();
 
-            foreach (Database.Models.Info student in students)
+            foreach (Database.Models.Info group in groups)
             {
                 mappedStudents.Add(new Info()
                 {
-                    ID = student.ID,
-                    Name = student.Name
+                    ID = group.ID,
+                    Name = group.Name
                 });
                 
             }
