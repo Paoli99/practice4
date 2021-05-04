@@ -7,13 +7,13 @@ using Git.Pracice_4.Logic.Models;
 
 namespace Git.Pracice_4.Logic.Managers
 {
-    public class InfoManager
+    public class InfoManager : IInfoManager 
     {
-        private readonly DbContext _dbContext;
+        private readonly IDbContext _dbContext;
 
-        public InfoManager()
+        public InfoManager(IDbContext dbContext)
         {
-            _dbContext = new DbContext();
+            _dbContext = dbContext; 
         }
 
         public List<Info> GetAllInfo()

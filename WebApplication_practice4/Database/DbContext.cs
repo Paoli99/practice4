@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Git.Pracice_4.Database
 {
-    public class DbContext
+    public class DbContext : IDbContext
     {
         public List<Info> InfoTable { get; set; }
 
@@ -15,10 +15,13 @@ namespace Git.Pracice_4.Database
             InfoTable = new List<Info>()
             {
                 // new Info() {Name = $"Mauricio from env: {projectTitle}" },
-                new Info() { Name = $"Mauricio"},
-                new Info() { Name = "Will" },
-                new Info() { Name = "Alice" }
-            };
+                new Info() { ID= "Group-001", Name = $"Mauricio", AvailableSlots = 2},
+                new Info() { ID= "Group-002", Name = "Will", AvailableSlots = 2},
+                new Info() { ID= "Group-003", Name = "Alice", AvailableSlots = 2}
+        };
+
+
+            
         }
 
         public Info AddStudent(Info student)
@@ -29,16 +32,7 @@ namespace Git.Pracice_4.Database
 
         public Info UpdateStudent(Info studentToUpdate)
         {
-            Info foundStudent = InfoTable.Find(student => student.CI == studentToUpdate.CI);
-
-            /*foreach(var student in InfoTable)
-            {
-                if(student.Name == studentToUpdate.Name)
-                {
-                    foundStudent = student;
-                    break; 
-                }
-            }*/
+            Info foundStudent = InfoTable.Find(student => student.ID == studentToUpdate.ID);
 
             foundStudent.Name = studentToUpdate.Name;
             return foundStudent; 

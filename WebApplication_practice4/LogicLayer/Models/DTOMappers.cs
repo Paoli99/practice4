@@ -14,7 +14,7 @@ namespace Git.Pracice_4.Logic.Models
             {
                 mappedStudents.Add(new Info()
                 {
-                    CI = student.CI,
+                    ID = student.ID,
                     Name = student.Name
                 });
                 

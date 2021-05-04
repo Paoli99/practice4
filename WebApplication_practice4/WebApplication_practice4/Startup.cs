@@ -1,3 +1,6 @@
+using Git.Pracice_4.Database;
+using Git.Pracice_4.Logic;
+using Git.Pracice_4.Logic.Managers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,7 +37,12 @@ namespace WebApplication_practice4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IInfoManager, InfoManager>();
+            services.AddSingleton<IDbContext, DbContext>();
+            
             services.AddControllers();
+
+
             services.AddSwaggerGen(p =>
                 {
                     p.SwaggerDoc("v3", new OpenApiInfo

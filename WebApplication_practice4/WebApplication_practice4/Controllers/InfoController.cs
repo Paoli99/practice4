@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Git.Pracice_4.Logic.Managers;
 using Git.Pracice_4.Logic.Models;
+using Git.Pracice_4.Logic;
 
 namespace WebApplication_practice4.Controllers
 {
@@ -15,11 +16,11 @@ namespace WebApplication_practice4.Controllers
     public class InfoController : ControllerBase
     {
         private readonly IConfiguration _config;
-        private readonly InfoManager _infoManager; 
-        public InfoController(IConfiguration config)
+        private readonly IInfoManager _infoManager; 
+        public InfoController(IConfiguration config, IInfoManager infoManager)
         {
             _config = config;
-            _infoManager = new InfoManager();
+            _infoManager = infoManager;
         }
 
         [HttpGet]
