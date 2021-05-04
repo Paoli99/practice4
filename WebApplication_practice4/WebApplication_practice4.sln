@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_practice4", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "LogicLayer\Logic.csproj", "{A0DFE532-4532-4E82-8F36-8C5551EABB6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{75785D5E-9764-4FE1-A4C5-972D35372861}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A0DFE532-4532-4E82-8F36-8C5551EABB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0DFE532-4532-4E82-8F36-8C5551EABB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0DFE532-4532-4E82-8F36-8C5551EABB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75785D5E-9764-4FE1-A4C5-972D35372861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75785D5E-9764-4FE1-A4C5-972D35372861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75785D5E-9764-4FE1-A4C5-972D35372861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75785D5E-9764-4FE1-A4C5-972D35372861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

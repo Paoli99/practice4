@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace Git.Pracice_4.Logic.Models
+namespace Git.Pracice_4.Database.Models 
 {
     public class Info
     {

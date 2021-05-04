@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Git.Pracice_4.Database;
 using Git.Pracice_4.Logic.Models;
+
 
 namespace Git.Pracice_4.Logic.Managers
 {
     public class InfoManager
     {
+        private readonly DbContext _dbContext;
+
+        public InfoManager()
+        {
+            _dbContext = new DbContext();
+        }
+
         public List<Info> GetAllInfo()
         {
             /*string projectTitle = _config.GetSection("Project").GetSection("Title").Value;
@@ -14,15 +23,8 @@ namespace Git.Pracice_4.Logic.Managers
 
             Console.Out.WriteLine($"We are connecting to.... {dbConnection}");*/
 
-
-
-            return new List<Info>()
-            {
-                // new Info() {Name = $"Mauricio from env: {projectTitle}" },
-                new Info() {Name = $"Mauricio from env: " },
-                new Info() {Name = "Will" },
-                new Info() {Name = "Alice" },
-            };
+            List<Database.Models.Info> students =  _dbContext.GetAll();
+            return DTOMappers.MapStudent(students); 
         }
 
         public Info CreateStudent(string studentName)
