@@ -7,11 +7,11 @@ namespace Git.Pracice_4.Database
 {
     public interface IDbContext
     {
-        Info AddStudent(Info student);
-        Info UpdateStudent(Info studentToUpdate);
+        Info AddGroup(Info group);
+        Info UpdateGroup(Info groupToUpdate);
 
 
-        Info DeleteStudent(Info studentToDelete);
+        Info DeleteGroup(Info groupToDelete);
 
         List<Info> GetAll();
     }

@@ -10,6 +10,7 @@ namespace Git.Pracice_4.Logic.Models
         [Required(ErrorMessage = "{0} es requerido.")]
         [StringLength(50, MinimumLength = 1,
         ErrorMessage = "El nombre debe tener como minimo 1 caracter y maximo 50 caracteres")]
+        
         public String Name { get; set; }
         
 

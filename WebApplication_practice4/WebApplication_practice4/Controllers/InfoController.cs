@@ -30,22 +30,22 @@ namespace WebApplication_practice4.Controllers
         }
 
         [HttpPost]
-        public Info CreateStudents([FromBody] string studentName)
+        public Info CreateGroup([FromBody] string idGroup, string groupName, int groupSlots)
         {
-            return _infoManager.CreateStudent(studentName);
+            return _infoManager.CreateGroup(idGroup, groupName, groupSlots);
         }
 
         [HttpPut]
 
-        public Info UpdateStudent([FromBody] Info student)
+        public Info UpdateStudent([FromBody] Info group)
         {
-            return _infoManager.UpdateStudent(student);
+            return _infoManager.UpdateGroup(group);
         }
 
         [HttpDelete]
         public Info DeleteStudents([FromBody] Info student)
         {
-            return _infoManager.DeleteStudent(student);
+            return _infoManager.DeleteGroup(student);
         }
     }
 }

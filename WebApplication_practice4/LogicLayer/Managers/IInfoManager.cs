@@ -9,10 +9,11 @@ namespace Git.Pracice_4.Logic
     {
         List<Info> GetAllInfo();
 
-        Info CreateStudent(string studentName);
+        Info CreateGroup(string groupID, string groupName, int groupSlots);
 
-        Info UpdateStudent(Info student);
+        Info UpdateGroup(Info group);
 
-        Info DeleteStudent(Info student);
+        Info DeleteGroup(Info group);
+        
     }
 }

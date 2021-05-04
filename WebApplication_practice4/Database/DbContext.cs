@@ -15,34 +15,34 @@ namespace Git.Pracice_4.Database
             InfoTable = new List<Info>()
             {
                 // new Info() {Name = $"Mauricio from env: {projectTitle}" },
-                new Info() { ID= "Group-001", Name = $"Mauricio", AvailableSlots = 2},
-                new Info() { ID= "Group-002", Name = "Will", AvailableSlots = 2},
-                new Info() { ID= "Group-003", Name = "Alice", AvailableSlots = 2}
+                new Info() { ID= "001", Name = $"Group", AvailableSlots = 2},
+                new Info() { ID= "002", Name = "Group", AvailableSlots = 2},
+                new Info() { ID= "003", Name = "Group", AvailableSlots = 2}
         };
 
 
             
         }
 
-        public Info AddStudent(Info student)
+        public Info AddGroup(Info group)
         {
-            InfoTable.Add(student);
-            return student; 
+            InfoTable.Add(group);
+            return group; 
         }
 
-        public Info UpdateStudent(Info studentToUpdate)
+        public Info UpdateGroup(Info groupToUpdate)
         {
-            Info foundStudent = InfoTable.Find(student => student.ID == studentToUpdate.ID);
+            Info foundGroup = InfoTable.Find(group => group.ID == groupToUpdate.ID);
 
-            foundStudent.Name = studentToUpdate.Name;
-            return foundStudent; 
+            foundGroup.Name = groupToUpdate.Name;
+            return foundGroup; 
         }
 
-        public Info DeleteStudent(Info studentToDelete)
+        public Info DeleteGroup(Info groupToDelete)
         { 
 
-            InfoTable.Remove(studentToDelete);
-            return studentToDelete; 
+            InfoTable.Remove(groupToDelete);
+            return groupToDelete; 
 
         }
 
